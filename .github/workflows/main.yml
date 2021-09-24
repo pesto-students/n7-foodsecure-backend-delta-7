@@ -22,6 +22,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+           fetch-depth: 0
       # Install node_modules
       - run: npm install
       - name: lint
@@ -32,13 +34,24 @@ jobs:
         run: npm run test
       - name: test coverage
         run: npm run test:cov
-      
-      - uses: akhileshns/heroku-deploy@v3.12.12
-        with:
-          heroku_api_key: ${{ secrets.HEROKUNEXTJSDEPLOYMENT }}
-          heroku_app_name: food-secure-back-end
-          heroku_email: "gs22111994@gmail.com"
-      - name: pull from Heroku
-        run: git pull --rebase heroku master
+
+      - name: Heroku login credentials
+        run: |
+          cat > ~/.netrc <<EOF
+            machine api.heroku.com
+              login $HEROKU_EMAIL
+              password $HEROKUFOODSECUREBACKEND
+            machine git.heroku.com
+              login $HEROKU_EMAIL
+              password $HEROKUFOODSECUREBACKEND
+          EOF
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKUFOODSECUREBACKEND }}
+          HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
+      - name: Add remote origin to Heroku
+        run: git remote add heroku https://heroku:${{ secrets.HEROKUFOODSECUREBACKEND }}@git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git
+        env:
+          HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
       - name: Push to Heroku
         run: git push heroku master
+
