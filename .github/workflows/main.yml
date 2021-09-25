@@ -16,11 +16,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: Start
+        uses: actions/checkout@v2
         with:
            fetch-depth: 0
       # Install node_modules
-      - run: npm install
+      - name: install node modules
+        run: npm install
       - name: lint
         run: npm run lint
       - name: build
@@ -50,4 +52,3 @@ jobs:
       - name: Push to Heroku
         run: git push heroku master
         if: github.ref == 'refs/heads/master'
-
