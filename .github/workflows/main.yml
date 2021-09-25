@@ -15,10 +15,21 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Check out repository
+      - name: Start
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      # Install node_modules
+      - name: install node modules
+      - run: npm install
+      - name: lint
+        run: npm run lint
+      - name: build
+        run: npm run build
+      - name: test
+        run: npm run test
+      - name: test coverage
+        run: npm run test:cov
       - name: Heroku login credentials
         run: |
           cat > ~/.netrc <<EOF
