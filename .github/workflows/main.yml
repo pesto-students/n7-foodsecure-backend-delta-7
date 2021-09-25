@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 0
       # Install node_modules
       - name: install node modules
-      - run: npm install
+        run: npm install
       - name: lint
         run: npm run lint
       - name: build
