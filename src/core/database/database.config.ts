@@ -9,6 +9,11 @@ export const databaseConfig = {
     database: process.env.DB_NAME_DEVELOPMENT,
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
+    pool: {
+      max: parseInt(process.env.MAX_POOL),
+      min: parseInt(process.env.MIN_POOL),
+      idle: parseInt(process.env.IDLE_POOL),
+    },
   },
   test: {
     username: process.env.DB_USER,
