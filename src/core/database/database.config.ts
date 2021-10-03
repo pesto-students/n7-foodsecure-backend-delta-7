@@ -19,7 +19,6 @@ export const databaseConfig = {
     dialect: process.env.DB_DIALECT,
     dialectOptions: {
       ssl: {
-        require: parseInt(process.env.SSL_REQUIRE),
         rejectUnauthorized: rejectUnauthorized,
       },
     },
@@ -37,7 +36,6 @@ export const databaseConfig = {
     dialect: process.env.DB_DIALECT,
     dialectOptions: {
       ssl: {
-        require: parseInt(process.env.SSL_REQUIRE),
         rejectUnauthorized: rejectUnauthorized,
       },
     },
