@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "c6b0fe8a-3a71-48fd-8b57-c4e07cf2e9c9",
+		"name": "food-secure",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/v1/auth/signup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1MDM0MmIwMjU1MDAyYWI3NWUwNTM0YzU4MmVjYzY2Y2YwZTE3ZDIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmlyLWF1dGgtZGQ4MTIiLCJhdWQiOiJmaXItYXV0aC1kZDgxMiIsImF1dGhfdGltZSI6MTYzMzI3NDEzMywidXNlcl9pZCI6Ilh3aDhPdGdteG9WVkU3TThpcHA5TWt4QVJZODMiLCJzdWIiOiJYd2g4T3RnbXhvVlZFN004aXBwOU1reEFSWTgzIiwiaWF0IjoxNjMzMjc0MTMzLCJleHAiOjE2MzMyNzc3MzMsImVtYWlsIjoiZ3MyMjExMTk5NEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiZ3MyMjExMTk5NEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.s0YoLLKEWhEO6oKyUEGnUVFhqN0WNB7F0qePUt8Q3upHCNC3z3D-bztzeRUCPL-ws_J03ayDhTNTiq2NGFkRTKTXh70kZiKDwEiQnBOvpHV_Cw6GSZNYSfh6of8_J16gUnBVdWzvlGU31VmYe4FESCrscSVC83FJJ4zClQkgx3CWzGKZvS5Gr_cAImuaNLmaZPPGCxRzSNDuRPIO7Oz67KeCtHQtcfSln8gz5ghZYo5Ywao0dtcMZ99k2BoAOoNb7iBchfSUb8h3bt0ixzmgUYxvpR73BfNo1TKAEnInfDohZIwAi-fdRiRSEB9UDQMaf5osWDjRwWUE_LXICPVGEQ\",\r\n    \"role\":\"ngo\",\r\n    \"lat\":35.929673,\r\n    \"lng\":-78.948237\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/auth/login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1MDM0MmIwMjU1MDAyYWI3NWUwNTM0YzU4MmVjYzY2Y2YwZTE3ZDIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmlyLWF1dGgtZGQ4MTIiLCJhdWQiOiJmaXItYXV0aC1kZDgxMiIsImF1dGhfdGltZSI6MTYzMzI2NDI3OSwidXNlcl9pZCI6Ilh3aDhPdGdteG9WVkU3TThpcHA5TWt4QVJZODMiLCJzdWIiOiJYd2g4T3RnbXhvVlZFN004aXBwOU1reEFSWTgzIiwiaWF0IjoxNjMzMjY0Mjc5LCJleHAiOjE2MzMyNjc4NzksImVtYWlsIjoiZ3MyMjExMTk5NEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiZ3MyMjExMTk5NEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.XHKcK-abkLcsuOW8ELnYtyopIgqSaRFiAsWp6nk1B9OomR8TeeOTHm-SYa2TAerju0uqlO5UdCa18gmOy1Rv137MBzff5gIodlaQatQh7Y4wWABuq6X67F4SoSgH_8u2NppiJGtHH3riXwLrczgxNWuUorNnW3rYVE8eFOWJuDHtLf6S9x71TNvMQwInRCsye_kNIheQJTufZNWEor5jMm2LWSCwLeeWqIBjYuhN0FHa-pNtOwvehtaOUJnx6gKLjg2BQd1MdcbVrssOODs3dTKgosjtwl3SA26tQ2TGEzQHtC3Gsz1ny6uNTyiHOkHcwqPTTrhLlxcz7_Mm6W42xw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
