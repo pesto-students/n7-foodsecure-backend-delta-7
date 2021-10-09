@@ -10,6 +10,7 @@ export class UsersService {
   ) {}
 
   async create(user: User): Promise<User> {
+    console.log(user);
     return await this.userRepository.create<User>(user);
   }
 

@@ -1,5 +1,5 @@
-// import * as dotenv from 'dotenv';
-// dotenv.config();
+import * as dotenv from 'dotenv';
+dotenv.config();
 const rejectUnauthorized = process.env.SSL_REJECT_UNAUTHORIZED === 'true';
 export const databaseConfig = {
   development: {

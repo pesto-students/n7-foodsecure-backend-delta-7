@@ -1,5 +1,5 @@
-// import * as dotenv from 'dotenv';
-// dotenv.config();
+import * as dotenv from 'dotenv';
+dotenv.config();
 module.exports = {
   development: {
     dialect: process.env.DB_DIALECT,

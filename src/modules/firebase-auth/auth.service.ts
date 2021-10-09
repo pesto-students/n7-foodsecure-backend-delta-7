@@ -11,7 +11,7 @@ export class AuthService {
   ) {}
 
   async validateUser(role, request: any = '') {
-    const token = this.getToken(request);
+    const token = this.checkUserRole(role, request);
     if (token) {
       const uid = await this.firebaseService.validate(token);
       if (uid) {
@@ -20,6 +20,10 @@ export class AuthService {
     }
 
     return false;
+  }
+
+  checkUserRole(role, request) {
+    return role == request.headers['role'] ? this.getToken(request) : '';
   }
 
   getToken = (req) => {
@@ -47,5 +51,13 @@ export class AuthService {
       return { role: data.role };
     }
     return { err: 'Something went wrong' };
+  }
+
+  async getTokenAndUSerInfo(req) {
+    const token = this.getToken(req);
+    if (token) {
+      return await this.firebaseService.getUserInfo(token);
+    }
+    return null;
   }
 }
