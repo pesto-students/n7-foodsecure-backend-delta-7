@@ -60,4 +60,18 @@ export class AuthService {
     }
     return null;
   }
+
+  getUSerRole = (request) => {
+    return request.headers['role'];
+  };
+
+  async getUserDetail(req: any) {
+    const userInfo = await this.getTokenAndUSerInfo(req);
+    if (userInfo) {
+      const id = userInfo?.user_id;
+      const role = this.getUSerRole(req);
+      return await this.userService.findOneByFirebaseIdRole(id, role);
+    }
+    return null;
+  }
 }

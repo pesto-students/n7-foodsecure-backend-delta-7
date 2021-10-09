@@ -27,7 +27,6 @@ export class AuthController {
       user.lat = data.lat;
       user.lng = data.lng;
       user.role = data.role;
-      console.log(user);
       return await this.authService.create(user);
     }
     return { err: 'Something went wrong' };

@@ -18,7 +18,7 @@ export class PickupRequestService {
       expiry_time: post.expiry_time,
       price: post.price,
       food_items: post.food_items,
-      userId: 2,
+      userId: post.userId,
     } as PickupRequest);
   }
 }

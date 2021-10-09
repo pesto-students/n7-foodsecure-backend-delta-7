@@ -13,17 +13,16 @@ export class PickupRequestController {
 
   @UseGuards(IsRestaurant)
   @Post('add')
-  async signUp(@Body() post: PickupRequestDto, @Request() req) {
-    const userInfo = await this.authService.getTokenAndUSerInfo(req);
-    if (userInfo) {
+  async add(@Body() post: PickupRequestDto, @Request() req) {
+    const userDetail = await this.authService.getUserDetail(req);
+    if (userDetail) {
       const pickupRequest = new PickupRequestDto();
       pickupRequest.number_of_meals = post.number_of_meals;
       pickupRequest.prepared_time = post.prepared_time;
       pickupRequest.expiry_time = post.expiry_time;
       pickupRequest.price = post.price;
       pickupRequest.food_items = post.food_items;
-      pickupRequest.userId = 2;
-      console.log(pickupRequest);
+      pickupRequest.userId = userDetail.id;
       return await this.pickupRequestService.create(pickupRequest);
     }
     return '';
