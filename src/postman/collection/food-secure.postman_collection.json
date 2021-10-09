@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:3000/api/v1/auth/signup",
+			"name": "http://localhost:3000/api/v1/auth/signup restaurant",
 			"request": {
 				"auth": {
 					"type": "noauth"
@@ -15,7 +15,28 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1MDM0MmIwMjU1MDAyYWI3NWUwNTM0YzU4MmVjYzY2Y2YwZTE3ZDIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmlyLWF1dGgtZGQ4MTIiLCJhdWQiOiJmaXItYXV0aC1kZDgxMiIsImF1dGhfdGltZSI6MTYzMzQwNTcyNCwidXNlcl9pZCI6IjFTd25PWUJ2SHBYNFJTN2Qwb3JPUDV5a216ajIiLCJzdWIiOiIxU3duT1lCdkhwWDRSUzdkMG9yT1A1eWttemoyIiwiaWF0IjoxNjMzNDA1NzI0LCJleHAiOjE2MzM0MDkzMjQsImVtYWlsIjoiYWJjQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJhYmNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.EA3gt9kzDD2vx5JApbycJavlZEyHQ945UuySbE9mTrX2vgGtUzuRuNi4jy3S_RdrLVgTNx9cxrKe_6SS_GGH1RfCfN2d9ZgolW8PlBttgAjREFhYxs37rj-jttJaylVgwTEff2HdVFE4BJmVYyQ0gEapg63RwGBPlBzRblmN82nl-_OVTUkimon7Fj0LhGktYnzAeKnG5wwvRGYPIyM9hA9xC6CQ8LXOJfYoq8bYSyrFb7MT7N5LBkcFtSe5ZLBGtgZR-q-XatPM7WZgnC8wOZj-zjQwl8eDseVOAqWI_96lUmsaQJZInUpJkHVjSCpoaWORF-2CMEm-4OSlUt07ng\",\r\n    \"role\":\"ngo1\",\r\n    \"lat\":35.929673,\r\n    \"lng\":-78.948237\r\n}",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1MDM0MmIwMjU1MDAyYWI3NWUwNTM0YzU4MmVjYzY2Y2YwZTE3ZDIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmlyLWF1dGgtZGQ4MTIiLCJhdWQiOiJmaXItYXV0aC1kZDgxMiIsImF1dGhfdGltZSI6MTYzMzc3NTkyNywidXNlcl9pZCI6Ilh3aDhPdGdteG9WVkU3TThpcHA5TWt4QVJZODMiLCJzdWIiOiJYd2g4T3RnbXhvVlZFN004aXBwOU1reEFSWTgzIiwiaWF0IjoxNjMzNzc1OTI3LCJleHAiOjE2MzM3Nzk1MjcsImVtYWlsIjoiZ3MyMjExMTk5NEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiZ3MyMjExMTk5NEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.UadfJ0c4ycX_VFqaSxRwsROIKU3gVf34fUi_ee6SzSY2Pr0RMqPPUTfIvT3wgi6i9h4TyEyWZ8Yzxo2aJWdWXDF1OzPRk26MJ5QuxJvXNO_1PKlChkXQQ_4YaA0hM2BQCnB9TVwq_jDzX8cOabeWDVhirmQbGsPqGohiT8gqUEAfSqkTNKeuaIPudQdK3QAIR3KOhNSbgYxFmhl6ArQENwZW-DtEK5KVvxde0YvS6rHx0SELND9-p-btCFWBORBDu3UC5ZiKTHTqFqo2uD36n1J8figPPZ8s5juEGFzByscvhA-f_x7coZYWjNvZagFhIi55JHSvsdCA23fIjZfp0g\",\r\n    \"role\":\"restaurant\",\r\n    \"lat\":35.929673,\r\n    \"lng\":-78.948237\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/v1/auth/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/auth/signup NGO",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1MDM0MmIwMjU1MDAyYWI3NWUwNTM0YzU4MmVjYzY2Y2YwZTE3ZDIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmlyLWF1dGgtZGQ4MTIiLCJhdWQiOiJmaXItYXV0aC1kZDgxMiIsImF1dGhfdGltZSI6MTYzMzc3NTkyNywidXNlcl9pZCI6Ilh3aDhPdGdteG9WVkU3TThpcHA5TWt4QVJZODMiLCJzdWIiOiJYd2g4T3RnbXhvVlZFN004aXBwOU1reEFSWTgzIiwiaWF0IjoxNjMzNzc1OTI3LCJleHAiOjE2MzM3Nzk1MjcsImVtYWlsIjoiZ3MyMjExMTk5NEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiZ3MyMjExMTk5NEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.UadfJ0c4ycX_VFqaSxRwsROIKU3gVf34fUi_ee6SzSY2Pr0RMqPPUTfIvT3wgi6i9h4TyEyWZ8Yzxo2aJWdWXDF1OzPRk26MJ5QuxJvXNO_1PKlChkXQQ_4YaA0hM2BQCnB9TVwq_jDzX8cOabeWDVhirmQbGsPqGohiT8gqUEAfSqkTNKeuaIPudQdK3QAIR3KOhNSbgYxFmhl6ArQENwZW-DtEK5KVvxde0YvS6rHx0SELND9-p-btCFWBORBDu3UC5ZiKTHTqFqo2uD36n1J8figPPZ8s5juEGFzByscvhA-f_x7coZYWjNvZagFhIi55JHSvsdCA23fIjZfp0g\",\r\n    \"role\":\"ngo\",\r\n    \"lat\":35.929673,\r\n    \"lng\":-78.948237\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -32,12 +53,117 @@
 				"auth": {
 					"type": "bearer",
 					"bearer": {
-						"token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1MDM0MmIwMjU1MDAyYWI3NWUwNTM0YzU4MmVjYzY2Y2YwZTE3ZDIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmlyLWF1dGgtZGQ4MTIiLCJhdWQiOiJmaXItYXV0aC1kZDgxMiIsImF1dGhfdGltZSI6MTYzMzI3NDEzMywidXNlcl9pZCI6Ilh3aDhPdGdteG9WVkU3TThpcHA5TWt4QVJZODMiLCJzdWIiOiJYd2g4T3RnbXhvVlZFN004aXBwOU1reEFSWTgzIiwiaWF0IjoxNjMzMjc0MTMzLCJleHAiOjE2MzMyNzc3MzMsImVtYWlsIjoiZ3MyMjExMTk5NEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiZ3MyMjExMTk5NEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.s0YoLLKEWhEO6oKyUEGnUVFhqN0WNB7F0qePUt8Q3upHCNC3z3D-bztzeRUCPL-ws_J03ayDhTNTiq2NGFkRTKTXh70kZiKDwEiQnBOvpHV_Cw6GSZNYSfh6of8_J16gUnBVdWzvlGU31VmYe4FESCrscSVC83FJJ4zClQkgx3CWzGKZvS5Gr_cAImuaNLmaZPPGCxRzSNDuRPIO7Oz67KeCtHQtcfSln8gz5ghZYo5Ywao0dtcMZ99k2BoAOoNb7iBchfSUb8h3bt0ixzmgUYxvpR73BfNo1TKAEnInfDohZIwAi-fdRiRSEB9UDQMaf5osWDjRwWUE_LXICPVGEQ"
+						"token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1MDM0MmIwMjU1MDAyYWI3NWUwNTM0YzU4MmVjYzY2Y2YwZTE3ZDIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmlyLWF1dGgtZGQ4MTIiLCJhdWQiOiJmaXItYXV0aC1kZDgxMiIsImF1dGhfdGltZSI6MTYzMzc3NTE5MCwidXNlcl9pZCI6IjFTd25PWUJ2SHBYNFJTN2Qwb3JPUDV5a216ajIiLCJzdWIiOiIxU3duT1lCdkhwWDRSUzdkMG9yT1A1eWttemoyIiwiaWF0IjoxNjMzNzc1MTkwLCJleHAiOjE2MzM3Nzg3OTAsImVtYWlsIjoiYWJjQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJhYmNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.zhymvvgdy9y_egQ0QQ8Y8_6ms06nmahCwDvoXyxC_0-Iw6IHTcsjFDjLM5Qb-wD4BtRrSLjqXkqgJmIKbbZsYKNjCfFtsivKj20PEw8UqywJcnbzBsRkFqrVBG5kUlP6TzfJDfC_uKV1d1iQGaxl6USxXkNyNMyKeSIr5IZ6kHldkA4W0VVZX2MU6_Bt6c443QcIFf8-2SyXF8BqTaCyJAbWq1wAu54J4LEu5uuEzmXnz20DERwzPCKkO9KLy-O7suToEpIXN2y-PB2VpZhhutsUnziQWsjyx4zg9-G7VgfrHPyvH54lee5H2yD7YGkpaVtv5t5qCaWIJATpbxFntg"
 					}
 				},
 				"method": "GET",
 				"header": [],
 				"url": "http://localhost:3000/api/v1/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/ngo-pickup/6 assignPickupRequest",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1MDM0MmIwMjU1MDAyYWI3NWUwNTM0YzU4MmVjYzY2Y2YwZTE3ZDIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmlyLWF1dGgtZGQ4MTIiLCJhdWQiOiJmaXItYXV0aC1kZDgxMiIsImF1dGhfdGltZSI6MTYzMzc4MjI0OCwidXNlcl9pZCI6Ilh3aDhPdGdteG9WVkU3TThpcHA5TWt4QVJZODMiLCJzdWIiOiJYd2g4T3RnbXhvVlZFN004aXBwOU1reEFSWTgzIiwiaWF0IjoxNjMzNzgyMjQ4LCJleHAiOjE2MzM3ODU4NDgsImVtYWlsIjoiZ3MyMjExMTk5NEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiZ3MyMjExMTk5NEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.o62-twvCn7jdPCFsXW2tBI2qaegfiPjtbK1q7UVZ0iZFQgDQT7OCIZCIYnb7_e9IcCGYum9i8nQUa-5-ExsxLthFdFtIu28QYz257rx8BCQdccFaBvlyztJiuuRvjml8cmatwMU9YljV02Z-qeFJdH6EVabbs2XF2JvoaRyRc3vRoMTgGjouVM3m3zL2MMhN2xnaXE-7E26vPxwpp8yY-X6fEhKrpqCQ_GA7GSrhdNTv88-2F6jRP-ch4WWAIbsLprGiCQY9ZxWmRtoLEELm4a-QIuYAacbmNL2aKKGRX5NXzC3pXi3-WeC-jBcz-eNlnJ7hko6MQb7XlLhvTVqing"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "role",
+						"value": "ngo",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/api/v1/ngo-pickup/pickup-request/6"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/pickup-requests/count restaurant",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1MDM0MmIwMjU1MDAyYWI3NWUwNTM0YzU4MmVjYzY2Y2YwZTE3ZDIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmlyLWF1dGgtZGQ4MTIiLCJhdWQiOiJmaXItYXV0aC1kZDgxMiIsImF1dGhfdGltZSI6MTYzMzc4NjU3MCwidXNlcl9pZCI6IjFTd25PWUJ2SHBYNFJTN2Qwb3JPUDV5a216ajIiLCJzdWIiOiIxU3duT1lCdkhwWDRSUzdkMG9yT1A1eWttemoyIiwiaWF0IjoxNjMzNzg2NTcwLCJleHAiOjE2MzM3OTAxNzAsImVtYWlsIjoiYWJjQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJhYmNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.bSHLBvvTzXTZJvEDOHgEy8s6mQOkfHQQzj5Bc7CkS1uMh7SuGq4LZMTTKLOVYL9O1Z99QXcVGM2UKik9TTAAK_bAYms_WVrDaxJWkz31DXJPvKLxslwgaLQ_qpmD81uefz8FSjuDi4iPpNGyWE4y_oUtHpG0tfWsQP8oW13BlODcOucqb17H4h2gtWGjBbIbSU9TvPOj13E0soRPvWF3ntf1NYNZfsIxA_IRhcxxMCHRD92ZYOSq_tEyr2XB5Rq6wr4K1vLw0bMqR1n0D3MdOsGYIvN1Q8JK5_AD1wweF3aMf6vXTkRj1zIaU4qnOgaeJvr7QDqpgfNll4FATOx-aQ"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "role",
+						"value": "restaurant",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/api/v1/pickup-requests/count"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/ngo-pickup/pending-request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1MDM0MmIwMjU1MDAyYWI3NWUwNTM0YzU4MmVjYzY2Y2YwZTE3ZDIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmlyLWF1dGgtZGQ4MTIiLCJhdWQiOiJmaXItYXV0aC1kZDgxMiIsImF1dGhfdGltZSI6MTYzMzgwNTE5NSwidXNlcl9pZCI6Ilh3aDhPdGdteG9WVkU3TThpcHA5TWt4QVJZODMiLCJzdWIiOiJYd2g4T3RnbXhvVlZFN004aXBwOU1reEFSWTgzIiwiaWF0IjoxNjMzODA1MTk1LCJleHAiOjE2MzM4MDg3OTUsImVtYWlsIjoiZ3MyMjExMTk5NEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiZ3MyMjExMTk5NEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.vOuYGRhYprML3hWKrnkZ2dPK0fHI1SA7FuMafA0y91wZFnzWploeVFtCA1HW9VeRhUYufOKO_XHjDzsp4If3ql-yFzD3UJUh2_hH6nuweZynQcK0XIQbUkm5GU5483G0SPEecAeoJ60TVLe1Uw9OsxyGiZsRXVdd2BHu6Wo1Ln_dbUuZ3JqgAiYir7HYMA0f4z4BUkx_QCIsEKQPaPkpWCO3FdMbfvmVIi4E79Mh96gl75uWl90SERUuhV4TZXGBMS90Op2hWPxL8z9vQYJRsgJxZ_gULtGgGgn1qOnTGkJRC5o-zIpUdYeI68r4vS8ytOFSH1lFd3cfC_8e-PP_oQ"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "role",
+						"value": "ngo",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/api/v1/ngo-pickup/status-request/Pending"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/ngo-pickup/pending-request Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1MDM0MmIwMjU1MDAyYWI3NWUwNTM0YzU4MmVjYzY2Y2YwZTE3ZDIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmlyLWF1dGgtZGQ4MTIiLCJhdWQiOiJmaXItYXV0aC1kZDgxMiIsImF1dGhfdGltZSI6MTYzMzgwNTE5NSwidXNlcl9pZCI6Ilh3aDhPdGdteG9WVkU3TThpcHA5TWt4QVJZODMiLCJzdWIiOiJYd2g4T3RnbXhvVlZFN004aXBwOU1reEFSWTgzIiwiaWF0IjoxNjMzODA1MTk1LCJleHAiOjE2MzM4MDg3OTUsImVtYWlsIjoiZ3MyMjExMTk5NEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiZ3MyMjExMTk5NEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.vOuYGRhYprML3hWKrnkZ2dPK0fHI1SA7FuMafA0y91wZFnzWploeVFtCA1HW9VeRhUYufOKO_XHjDzsp4If3ql-yFzD3UJUh2_hH6nuweZynQcK0XIQbUkm5GU5483G0SPEecAeoJ60TVLe1Uw9OsxyGiZsRXVdd2BHu6Wo1Ln_dbUuZ3JqgAiYir7HYMA0f4z4BUkx_QCIsEKQPaPkpWCO3FdMbfvmVIi4E79Mh96gl75uWl90SERUuhV4TZXGBMS90Op2hWPxL8z9vQYJRsgJxZ_gULtGgGgn1qOnTGkJRC5o-zIpUdYeI68r4vS8ytOFSH1lFd3cfC_8e-PP_oQ"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "role",
+						"value": "ngo",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/api/v1/ngo-pickup/status-request/Completed"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/ngo-pickup/status-count",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1MDM0MmIwMjU1MDAyYWI3NWUwNTM0YzU4MmVjYzY2Y2YwZTE3ZDIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmlyLWF1dGgtZGQ4MTIiLCJhdWQiOiJmaXItYXV0aC1kZDgxMiIsImF1dGhfdGltZSI6MTYzMzgwNTE5NSwidXNlcl9pZCI6Ilh3aDhPdGdteG9WVkU3TThpcHA5TWt4QVJZODMiLCJzdWIiOiJYd2g4T3RnbXhvVlZFN004aXBwOU1reEFSWTgzIiwiaWF0IjoxNjMzODA1MTk1LCJleHAiOjE2MzM4MDg3OTUsImVtYWlsIjoiZ3MyMjExMTk5NEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiZ3MyMjExMTk5NEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.vOuYGRhYprML3hWKrnkZ2dPK0fHI1SA7FuMafA0y91wZFnzWploeVFtCA1HW9VeRhUYufOKO_XHjDzsp4If3ql-yFzD3UJUh2_hH6nuweZynQcK0XIQbUkm5GU5483G0SPEecAeoJ60TVLe1Uw9OsxyGiZsRXVdd2BHu6Wo1Ln_dbUuZ3JqgAiYir7HYMA0f4z4BUkx_QCIsEKQPaPkpWCO3FdMbfvmVIi4E79Mh96gl75uWl90SERUuhV4TZXGBMS90Op2hWPxL8z9vQYJRsgJxZ_gULtGgGgn1qOnTGkJRC5o-zIpUdYeI68r4vS8ytOFSH1lFd3cfC_8e-PP_oQ"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "role",
+						"value": "ngo",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/api/v1/ngo-pickup/status-count"
 			},
 			"response": []
 		},
@@ -59,7 +185,7 @@
 				"auth": {
 					"type": "bearer",
 					"bearer": {
-						"token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1MDM0MmIwMjU1MDAyYWI3NWUwNTM0YzU4MmVjYzY2Y2YwZTE3ZDIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmlyLWF1dGgtZGQ4MTIiLCJhdWQiOiJmaXItYXV0aC1kZDgxMiIsImF1dGhfdGltZSI6MTYzMzc3MTM2MCwidXNlcl9pZCI6Ilh3aDhPdGdteG9WVkU3TThpcHA5TWt4QVJZODMiLCJzdWIiOiJYd2g4T3RnbXhvVlZFN004aXBwOU1reEFSWTgzIiwiaWF0IjoxNjMzNzcxMzYwLCJleHAiOjE2MzM3NzQ5NjAsImVtYWlsIjoiZ3MyMjExMTk5NEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiZ3MyMjExMTk5NEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.aK2ahtYeIHGm3a3Jjo-udbJUDScwY3YVYKxZX0U_CWvw3oHBtGtMXAlNGO6dnXZaaxv6EUTIgojXoT9I4iHZ4OLwVm6BT3deh4Ye_rKhJVpAUI1Po0xVRfvAq4PF1ssfstUJgroSVvSQYfvKGFxoT1aWDM2vNCePLHnaXlR2aHJdGsOWnf93qQrFqdkgLFyg9Z6qD8OerjAyX4wpCYApUWUnOs8rLz3fhpGjooZMqO_d1D1aVQ6W49mje4m5FFtINshTBb7wXvxiQ2G4XKEkpLj3yU0uIffUWoNXsLmLGUxtT1Zj_sJfvredgfXKfMEja0_iRgYTtEArqhFDbTK8YA"
+						"token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1MDM0MmIwMjU1MDAyYWI3NWUwNTM0YzU4MmVjYzY2Y2YwZTE3ZDIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmlyLWF1dGgtZGQ4MTIiLCJhdWQiOiJmaXItYXV0aC1kZDgxMiIsImF1dGhfdGltZSI6MTYzMzc4NjU3MCwidXNlcl9pZCI6IjFTd25PWUJ2SHBYNFJTN2Qwb3JPUDV5a216ajIiLCJzdWIiOiIxU3duT1lCdkhwWDRSUzdkMG9yT1A1eWttemoyIiwiaWF0IjoxNjMzNzg2NTcwLCJleHAiOjE2MzM3OTAxNzAsImVtYWlsIjoiYWJjQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJhYmNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.bSHLBvvTzXTZJvEDOHgEy8s6mQOkfHQQzj5Bc7CkS1uMh7SuGq4LZMTTKLOVYL9O1Z99QXcVGM2UKik9TTAAK_bAYms_WVrDaxJWkz31DXJPvKLxslwgaLQ_qpmD81uefz8FSjuDi4iPpNGyWE4y_oUtHpG0tfWsQP8oW13BlODcOucqb17H4h2gtWGjBbIbSU9TvPOj13E0soRPvWF3ntf1NYNZfsIxA_IRhcxxMCHRD92ZYOSq_tEyr2XB5Rq6wr4K1vLw0bMqR1n0D3MdOsGYIvN1Q8JK5_AD1wweF3aMf6vXTkRj1zIaU4qnOgaeJvr7QDqpgfNll4FATOx-aQ"
 					}
 				},
 				"method": "POST",
@@ -72,7 +198,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"number_of_meals\": 10,\r\n    \"price\": 12,\r\n    \"prepared_time\": \"{{current_timestamp}}\",\r\n    \"expiry_time\": \"{{current_timestamp}}\",\r\n    \"food_items\": \"[{'aa':1}, {'bb': 2}]\"\r\n}",
+					"raw": "{\r\n    \"number_of_meals\": 20,\r\n    \"price\": 122,\r\n    \"prepared_time\": \"{{current_timestamp}}\",\r\n    \"expiry_time\": \"{{current_timestamp}}\",\r\n    \"food_items\": \"[{'asa':1}, {'bsb': 2}]\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -80,6 +206,27 @@
 					}
 				},
 				"url": "http://localhost:3000/api/v1/pickup-requests/add"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/pickup-requests",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1MDM0MmIwMjU1MDAyYWI3NWUwNTM0YzU4MmVjYzY2Y2YwZTE3ZDIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmlyLWF1dGgtZGQ4MTIiLCJhdWQiOiJmaXItYXV0aC1kZDgxMiIsImF1dGhfdGltZSI6MTYzMzc4NjU3MCwidXNlcl9pZCI6IjFTd25PWUJ2SHBYNFJTN2Qwb3JPUDV5a216ajIiLCJzdWIiOiIxU3duT1lCdkhwWDRSUzdkMG9yT1A1eWttemoyIiwiaWF0IjoxNjMzNzg2NTcwLCJleHAiOjE2MzM3OTAxNzAsImVtYWlsIjoiYWJjQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJhYmNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.bSHLBvvTzXTZJvEDOHgEy8s6mQOkfHQQzj5Bc7CkS1uMh7SuGq4LZMTTKLOVYL9O1Z99QXcVGM2UKik9TTAAK_bAYms_WVrDaxJWkz31DXJPvKLxslwgaLQ_qpmD81uefz8FSjuDi4iPpNGyWE4y_oUtHpG0tfWsQP8oW13BlODcOucqb17H4h2gtWGjBbIbSU9TvPOj13E0soRPvWF3ntf1NYNZfsIxA_IRhcxxMCHRD92ZYOSq_tEyr2XB5Rq6wr4K1vLw0bMqR1n0D3MdOsGYIvN1Q8JK5_AD1wweF3aMf6vXTkRj1zIaU4qnOgaeJvr7QDqpgfNll4FATOx-aQ"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "role",
+						"value": "restaurant",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/api/v1/pickup-requests"
 			},
 			"response": []
 		}

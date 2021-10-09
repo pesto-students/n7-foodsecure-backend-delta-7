@@ -36,6 +36,16 @@ export class PickupRequestController {
   }
 
   @UseGuards(IsRestaurant)
+  @Get()
+  async getPickupRequestByUser(@Request() req) {
+    const userDetail = await this.authService.getUserDetail(req);
+    if (userDetail) {
+      return await this.pickupRequestService.findByUserId(userDetail.id);
+    }
+    return '';
+  }
+
+  @UseGuards(IsRestaurant)
   @Get('count')
   async getPickupRequestByID(@Request() req) {
     const userDetail = await this.authService.getUserDetail(req);

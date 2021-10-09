@@ -9,7 +9,7 @@ import { NGOPickup } from '../../modules/ngo_pickup/ngo_pickup.entity';
 export const databaseProviders = [
   {
     provide: SEQUELIZE,
-    useFactory: async () => {
+    useFactory: async (): Promise<Sequelize> => {
       let config;
       switch (process.env.NODE_ENV) {
         case DEVELOPMENT:

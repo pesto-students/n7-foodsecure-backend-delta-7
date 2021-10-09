@@ -4,6 +4,7 @@ import { PickupRequest } from './pickup_request.entity';
 import { PICKUP_REQUEST_REPOSITORY } from '../../core/constants';
 import { PickupRequestDto } from './dto/pickup_request.dto';
 import { User } from '../users/user.entity';
+import { databaseProviders } from '../../core/database/database.providers';
 
 @Injectable()
 export class PickupRequestService {
@@ -38,9 +39,22 @@ export class PickupRequestService {
 
   async findOne(id): Promise<PickupRequest> {
     return await this.postRepository.findOne({
-      where: { userId: id },
+      where: { id },
       include: [{ model: User }],
     });
+  }
+
+  async findByUserId(id): Promise<any> {
+    const query = `select a.number_of_meals, a.prepared_time, a.expiry_time, a.price, a.status, c.email FROM public."PickupRequests" as a left JOIN public."NGOPickups" as b
+    ON a.id = b.pickup_request_id left JOIN public."Users" as c
+    On b."userId" = c.id where a."userId"=${id};
+     `;
+    const db = await databaseProviders[0].useFactory();
+    const result = await db.query(query);
+    if (result && result.length > 0) {
+      return result[0];
+    }
+    return [];
   }
 
   async update(id, data) {
