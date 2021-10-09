@@ -11,7 +11,7 @@ import { User } from '../users/user.entity';
 export class PickupRequest extends Model<PickupRequest> {
   @Column({
     type: DataType.INTEGER,
-    // allowNull: false,
+    allowNull: false,
   })
   number_of_meals: number;
 
@@ -38,6 +38,13 @@ export class PickupRequest extends Model<PickupRequest> {
     allowNull: true,
   })
   food_items: Text[];
+
+  @Column({
+    type: DataType.STRING,
+    allowNull: false,
+    defaultValue: 'Pending',
+  })
+  status: string;
 
   @ForeignKey(() => User)
   @Column({

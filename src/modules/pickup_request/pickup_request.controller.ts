@@ -1,4 +1,11 @@
-import { Controller, Request, Post, UseGuards, Body } from '@nestjs/common';
+import {
+  Controller,
+  Request,
+  Post,
+  UseGuards,
+  Body,
+  Get,
+} from '@nestjs/common';
 import { AuthService } from '../firebase-auth/auth.service';
 import { PickupRequestService } from './pickup_request.service';
 import { IsRestaurant } from '../../core/guards/isRestaurant.guard';
@@ -24,6 +31,24 @@ export class PickupRequestController {
       pickupRequest.food_items = post.food_items;
       pickupRequest.userId = userDetail.id;
       return await this.pickupRequestService.create(pickupRequest);
+    }
+    return '';
+  }
+
+  @UseGuards(IsRestaurant)
+  @Get('count')
+  async getPickupRequestByID(@Request() req) {
+    const userDetail = await this.authService.getUserDetail(req);
+    if (userDetail) {
+      const pendingCount = await this.pickupRequestService.getCountByStatus(
+        userDetail.id,
+        'Pending',
+      );
+      const completedCount = await this.pickupRequestService.getCountByStatus(
+        userDetail.id,
+        'Completed',
+      );
+      return { completedCount, pendingCount };
     }
     return '';
   }

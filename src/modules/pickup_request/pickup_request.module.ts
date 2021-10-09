@@ -8,6 +8,7 @@ import { AuthModule } from '../firebase-auth/auth.module';
 @Module({
   imports: [forwardRef(() => AuthModule)],
   providers: [PickupRequestService, ...pickupRequestProviders],
+  exports: [PickupRequestService],
   controllers: [PickupRequestController],
 })
 export class PickupRequestsModule {}
