@@ -45,7 +45,7 @@ export class PickupRequestService {
   }
 
   async findByUserId(id): Promise<any> {
-    const query = `select a.number_of_meals, a.prepared_time, a.expiry_time, a.price, a.status, c.email FROM public."PickupRequests" as a left JOIN public."NGOPickups" as b
+    const query = `select a.number_of_meals, a.prepared_time, a.expiry_time, a.price, a.status, c.email, c.name FROM public."PickupRequests" as a left JOIN public."NGOPickups" as b
     ON a.id = b.pickup_request_id left JOIN public."Users" as c
     On b."userId" = c.id where a."userId"=${id};
      `;
