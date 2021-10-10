@@ -65,12 +65,14 @@ export class NGOPickupController {
   }
 
   getMaxMinLatLng(lat, lng) {
+    console.log("LAt lng : ", lat, lng);
     lat = parseFloat(lat);
     lng = parseFloat(lng);
     const lat_min = lat - 0.045;
     const lat_max = lat + 0.045;
     const lng_min = lng - 0.045 / Math.cos((lat * Math.PI) / 180);
     const lng_max = lng + 0.045 / Math.cos((lat * Math.PI) / 180);
+    console.log("LAt lng : ", lat, lng, lat_min, lat_max, lng_min, lng_max);
     return { lat_min, lat_max, lng_min, lng_max };
   }
 }
