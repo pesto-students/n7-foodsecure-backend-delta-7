@@ -26,7 +26,7 @@ export const databaseProviders = [
       }
       const sequelize = new Sequelize(config);
       sequelize.addModels([User, PickupRequest, NGOPickup]);
-      await sequelize.sync({ alter: true });
+      await sequelize.sync({  });
       return sequelize;
     },
   },
