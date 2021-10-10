@@ -29,7 +29,7 @@ export class NGOPickupService {
    a."lng"<=${lng_max} and 
    role = 'restaurant' and 
    status='${status}'`;
-   console.log("NGO Query : " + query);
+    console.log('NGO Query : ' + query);
     const db = await databaseProviders[0].useFactory();
     const result = await db.query(query);
     if (result && result.length > 0) {
