@@ -8,6 +8,9 @@ export class UserDto {
   firebase_user_id: string;
 
   @IsNotEmpty()
+  name: string;
+
+  @IsNotEmpty()
   role: string;
 
   @IsNotEmpty()

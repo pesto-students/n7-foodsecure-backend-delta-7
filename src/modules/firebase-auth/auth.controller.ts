@@ -26,6 +26,7 @@ export class AuthController {
       user.firebase_user_id = userInfo.user_id;
       user.lat = data.lat;
       user.lng = data.lng;
+      user.name = data.name;
       user.role = data.role;
       return await this.authService.create(user);
     }

@@ -5,6 +5,9 @@ export class FirebaseUserDto {
   readonly token: string;
 
   @IsNotEmpty()
+  readonly name: string;
+
+  @IsNotEmpty()
   readonly role: string;
 
   @IsNotEmpty()

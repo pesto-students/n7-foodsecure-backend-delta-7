@@ -16,6 +16,11 @@ export class User extends Model<User> {
   firebase_user_id: string;
   @Column({
     type: DataType.STRING,
+    allowNull: true,
+  })
+  name: string;
+  @Column({
+    type: DataType.STRING,
     allowNull: false,
   })
   role: string;
