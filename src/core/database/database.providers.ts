@@ -25,12 +25,12 @@ export const databaseProviders = [
           config = databaseConfig.development;
       }
       const sequelize = new Sequelize(config);
+      sequelize.addModels([User, PickupRequest, NGOPickup]);
       try {
         await sequelize.authenticate();
         console.log('Connection has been established successfully.');
       } catch (error) {
         console.error('Unable to connect to the database:', error);
-        sequelize.addModels([User, PickupRequest, NGOPickup]);
         await sequelize.sync({});
       }
       return sequelize;
